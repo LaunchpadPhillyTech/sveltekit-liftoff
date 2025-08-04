@@ -1,0 +1,65 @@
+{
+    "name": "chatflowai-svelte",
+    "version": "1.0.0",
+    "description": "High-converting AI chatbot landing page built with Svelte",
+    "type": "module",
+    "scripts": {
+        "dev": "vite dev --host",
+        "build": "vite build",
+        "preview": "vite preview --host",
+        "check": "svelte-check --tsconfig ./jsconfig.json",
+        "check:watch": "svelte-check --tsconfig ./jsconfig.json --watch",
+        "lint": "eslint src/",
+        "lint:fix": "eslint src/ --fix",
+        "format": "prettier --write src/",
+        "test": "vitest",
+        "test:ui": "vitest --ui",
+        "test:coverage": "vitest --coverage"
+    },
+    "keywords": [
+        "svelte",
+        "landing-page",
+        "ai-chatbot",
+        "high-converting",
+        "saas",
+        "marketing"
+    ],
+    "author": "Your Name",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/yourusername/chatflowai-svelte.git"
+    },
+    "engines": {
+        "node": ">=18.0.0",
+        "npm": ">=9.0.0"
+    },
+    "devDependencies": {
+        "@sveltejs/adapter-auto": "^2.1.1",
+        "@sveltejs/kit": "^1.27.6",
+        "@sveltejs/vite-plugin-svelte": "^3.0.1",
+        "@tailwindcss/aspect-ratio": "^0.4.2",
+        "@tailwindcss/forms": "^0.5.7",
+        "@tailwindcss/typography": "^0.5.10",
+        "@typescript-eslint/eslint-plugin": "^6.13.2",
+        "@typescript-eslint/parser": "^6.13.2",
+        "autoprefixer": "^10.4.16",
+        "cssnano": "^6.0.1",
+        "eslint": "^8.55.0",
+        "eslint-config-prettier": "^9.1.0",
+        "eslint-plugin-svelte": "^3.11.0",
+        "postcss": "^8.4.32",
+        "prettier": "^3.1.1",
+        "prettier-plugin-svelte": "^3.1.2",
+        "sass": "^1.69.5",
+        "svelte": "^4.2.8",
+        "svelte-check": "^3.6.2",
+        "tailwindcss": "^3.3.6",
+        "vite": "^5.0.8",
+        "vitest": "^1.0.4"
+    },
+    "dependencies": {
+        "lucide-svelte": "^0.295.0"
+    },
+    "packageManager": "pnpm@10.13.1+sha512.37ebf1a5c7a30d5fabe0c5df44ee8da4c965ca0c5af3dbab28c3a1681b70a256218d05c81c9c0dcf767ef6b8551eb5b960042b9ed4300c59242336377e01cfad"
+}
