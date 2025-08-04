@@ -1,0 +1,12 @@
+{
+	"/": [],
+	"/api/analytics": [
+		"src/routes/api/analytics/+server.js"
+	],
+	"/api/leads": [
+		"src/routes/api/leads/+server.js"
+	],
+	"/api/social-proof": [
+		"src/routes/api/social-proof/+server.js"
+	]
+}

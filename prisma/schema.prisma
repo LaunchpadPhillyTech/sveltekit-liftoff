@@ -1,0 +1,61 @@
+// prisma/schema.prisma
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Lead {
+  id          String   @id @default(cuid())
+  email       String   @unique
+  businessName String?
+  phone       String?
+  source      String   @default("hero")
+  status      LeadStatus @default(NEW)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  @@map("leads")
+}
+
+model Analytics {
+  id        String   @id @default(cuid())
+  event     String
+  data      Json?
+  userAgent String?
+  ip        String?
+  createdAt DateTime @default(now())
+  
+  @@map("analytics")
+}
+
+model SocialProof {
+  id        String   @id @default(cuid())
+  message   String
+  location  String
+  type      ProofType
+  isActive  Boolean  @default(true)
+  createdAt DateTime @default(now())
+  
+  @@map("social_proof")
+}
+
+enum LeadStatus {
+  NEW
+  CONTACTED
+  QUALIFIED
+  CONVERTED
+  LOST
+}
+
+enum ProofType {
+  SIGNUP
+  SUCCESS
+  LEADS
+  BOOKING
+  SALES
+  CONVERSION
+}

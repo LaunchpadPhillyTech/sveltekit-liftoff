@@ -1,21 +1,18 @@
+import adapter from '@sveltejs/adapter-auto';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
-/** @type {import('@sveltejs/vite-plugin-svelte').SvelteConfig} */
+/** @type {import('@sveltejs/kit').Config} */
 const config = {
     preprocess: vitePreprocess(),
 
-    compilerOptions: {
-        enableSourcemap: true,
-        hydratable: true,
-        legacy: false
-    },
-
-    onwarn: (warning, handler) => {
-        if (warning.code === 'css-unused-selector') return;
-        if (warning.code === 'a11y-click-events-have-key-events') return;
-        if (warning.code === 'a11y-no-static-element-interactions') return;
-
-        handler(warning);
+    kit: {
+        adapter: adapter(),
+        alias: {
+            $components: 'src/components',
+            $stores: 'src/stores',
+            $utils: 'src/utils',
+            $styles: 'src/styles'
+        }
     }
 };
 
