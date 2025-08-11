@@ -11,7 +11,9 @@ export const nodes = [
 	() => import('./nodes/7'),
 	() => import('./nodes/8'),
 	() => import('./nodes/9'),
-	() => import('./nodes/10')
+	() => import('./nodes/10'),
+	() => import('./nodes/11'),
+	() => import('./nodes/12')
 ];
 
 export const server_loads = [];
@@ -25,7 +27,9 @@ export const dictionary = {
 		"/assessment/prompt-engineering": [7],
 		"/assessment/submission": [8],
 		"/assessment/technical-solution": [9],
-		"/careers": [10]
+		"/careers": [10],
+		"/privacy": [11],
+		"/terms": [12]
 	};
 
 export const hooks = {

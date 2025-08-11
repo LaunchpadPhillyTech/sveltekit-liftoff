@@ -20,16 +20,18 @@ type Layouts = {
 	"/assessment/prompt-engineering": undefined;
 	"/assessment/submission": undefined;
 	"/assessment/technical-solution": undefined;
-	"/careers": undefined
+	"/careers": undefined;
+	"/privacy": undefined;
+	"/terms": undefined
 };
 
-export type RouteId = "/" | "/api" | "/api/analytics" | "/api/assessment" | "/api/assessment/progress" | "/api/assessment/start" | "/api/assessment/submit" | "/api/assessment/upload" | "/api/leads" | "/api/social-proof" | "/assessment" | "/assessment/client-acquisition" | "/assessment/implementation" | "/assessment/overview" | "/assessment/prompt-engineering" | "/assessment/submission" | "/assessment/technical-solution" | "/careers";
+export type RouteId = "/" | "/api" | "/api/analytics" | "/api/assessment" | "/api/assessment/progress" | "/api/assessment/start" | "/api/assessment/submit" | "/api/assessment/upload" | "/api/leads" | "/api/social-proof" | "/assessment" | "/assessment/client-acquisition" | "/assessment/implementation" | "/assessment/overview" | "/assessment/prompt-engineering" | "/assessment/submission" | "/assessment/technical-solution" | "/careers" | "/privacy" | "/terms";
 
 export type RouteParams<T extends RouteId> = T extends keyof DynamicRoutes ? DynamicRoutes[T] : Record<string, never>;
 
 export type LayoutParams<T extends RouteId> = Layouts[T] | Record<string, never>;
 
-export type Pathname = "/" | "/api" | "/api/analytics" | "/api/assessment" | "/api/assessment/progress" | "/api/assessment/start" | "/api/assessment/submit" | "/api/assessment/upload" | "/api/leads" | "/api/social-proof" | "/assessment" | "/assessment/client-acquisition" | "/assessment/implementation" | "/assessment/overview" | "/assessment/prompt-engineering" | "/assessment/submission" | "/assessment/technical-solution" | "/careers";
+export type Pathname = "/" | "/api" | "/api/analytics" | "/api/assessment" | "/api/assessment/progress" | "/api/assessment/start" | "/api/assessment/submit" | "/api/assessment/upload" | "/api/leads" | "/api/social-proof" | "/assessment" | "/assessment/client-acquisition" | "/assessment/implementation" | "/assessment/overview" | "/assessment/prompt-engineering" | "/assessment/submission" | "/assessment/technical-solution" | "/careers" | "/privacy" | "/terms";
 
 export type ResolvedPathname = `${"" | `/${string}`}${Pathname}`;
 
