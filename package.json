@@ -41,7 +41,6 @@
   "dependencies": {
     "@prisma/client": "6.13.0",
     "@sendgrid/mail": "^7.7.0",
-    "fs": "0.0.1-security",
     "lucide-svelte": "^0.294.0",
     "path": "^0.12.7",
     "zod": "^3.22.4"

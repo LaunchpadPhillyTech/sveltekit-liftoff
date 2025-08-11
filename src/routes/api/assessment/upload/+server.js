@@ -6,6 +6,7 @@ import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 
 export async function POST({ request }) {
+  
   try {
     const formData = await request.formData();
     const file = formData.get("file");
@@ -22,6 +23,7 @@ export async function POST({ request }) {
 
     // Validate file size (10MB max)
     const maxSize = 10 * 1024 * 1024; // 10MB
+
     if (file.size > maxSize) {
       return json(
         { error: "File too large. Maximum size is 10MB." },
