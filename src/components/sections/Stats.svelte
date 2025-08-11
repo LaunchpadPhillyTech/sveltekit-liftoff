@@ -1,6 +1,6 @@
 <!-- src/components/sections/Stats.svelte -->
 <script>
-  export let id = 'stats';
+  export let id = "stats";
 </script>
 
 <section {id} class="stats section">

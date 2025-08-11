@@ -67,7 +67,7 @@
 </svelte:head>
 
 <!-- Background Elements -->
-<div class="gradient-bg"></div>
+<div class="gradient-bg" />
 
 <!-- Test if basic structure works -->
 {#if !mounted}
@@ -107,11 +107,7 @@
   }
 
   :global(body) {
-    font-family:
-      "Inter",
-      -apple-system,
-      BlinkMacSystemFont,
-      sans-serif;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
     line-height: 1.6;
     color: #1a1a1a;
     background: #0a0a0a;

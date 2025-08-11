@@ -37,7 +37,7 @@
       window.dispatchEvent(event);
     }, 10000);
 
-    return cleanup;
+    return () => cleanup();
   });
 
   // Navigation handlers
@@ -46,7 +46,12 @@
 
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth", block: "start" });
+      const headerHeight = 80; // Account for fixed header
+      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+      window.scrollTo({
+        top: elementPosition,
+        behavior: "smooth"
+      });
     }
   }
 
@@ -89,7 +94,7 @@
 
   <!-- Preconnect for performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
     rel="stylesheet"
@@ -140,11 +145,7 @@
   }
 
   :global(body) {
-    font-family:
-      "Inter",
-      -apple-system,
-      BlinkMacSystemFont,
-      sans-serif;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
     line-height: 1.6;
     color: #ffffff;
     background: #0a0a0a;

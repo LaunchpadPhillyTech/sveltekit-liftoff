@@ -3,10 +3,30 @@
 	"/api/analytics": [
 		"src/routes/api/analytics/+server.js"
 	],
+	"/api/assessment/progress": [
+		"src/routes/api/assessment/progress/+server.js"
+	],
+	"/api/assessment/start": [
+		"src/routes/api/assessment/start/+server.js"
+	],
+	"/api/assessment/submit": [
+		"src/routes/api/assessment/submit/+server.js"
+	],
+	"/api/assessment/upload": [
+		"src/routes/api/assessment/upload/+server.js"
+	],
 	"/api/leads": [
 		"src/routes/api/leads/+server.js"
 	],
 	"/api/social-proof": [
 		"src/routes/api/social-proof/+server.js"
-	]
+	],
+	"/assessment": [],
+	"/assessment/client-acquisition": [],
+	"/assessment/implementation": [],
+	"/assessment/overview": [],
+	"/assessment/prompt-engineering": [],
+	"/assessment/submission": [],
+	"/assessment/technical-solution": [],
+	"/careers": []
 }

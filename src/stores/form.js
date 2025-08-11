@@ -1,9 +1,9 @@
-import { writable } from 'svelte/store';
+import { writable } from "svelte/store";
 
 export const formData = writable({
-    email: '',
-    businessName: '',
-    phone: ''
+  email: "",
+  businessName: "",
+  phone: "",
 });
 
 export const isSubmitting = writable(false);

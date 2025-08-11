@@ -7,6 +7,7 @@
   import { currentScarcityCount } from "$stores/ui.js";
 
   export let onSeeProof = () => {};
+  export let onGetStarted = () => {};
 
   let showForm = false;
   let scarcityCount = 23;
@@ -20,6 +21,7 @@
 
   function handleGetStarted() {
     showForm = true;
+    onGetStarted(); // Call the prop function
     // Track conversion intent
     fetch("/api/analytics", {
       method: "POST",
@@ -32,7 +34,7 @@
   }
 </script>
 
-<section class="hero section">
+<section id="hero" class="hero section">
   <div class="container">
     <div class="hero-content">
       <div class="value-stack-badge">

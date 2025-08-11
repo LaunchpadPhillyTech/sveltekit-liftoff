@@ -72,11 +72,14 @@ declare module '$env/static/private' {
 	export const VSCODE_GIT_ASKPASS_NODE: string;
 	export const MANAGERPID: string;
 	export const SYSTEMD_EXEC_PID: string;
+	export const IM_CONFIG_CHECK_ENV: string;
 	export const GSM_SKIP_SSH_AGENT_WORKAROUND: string;
 	export const DBUS_SESSION_BUS_ADDRESS: string;
 	export const COLORTERM: string;
 	export const GIO_LAUNCHED_DESKTOP_FILE_PID: string;
 	export const DEBUGINFOD_URLS: string;
+	export const IM_CONFIG_PHASE: string;
+	export const WAYLAND_DISPLAY: string;
 	export const COREPACK_ENABLE_DOWNLOAD_PROMPT: string;
 	export const LOGNAME: string;
 	export const pnpm_config_verify_deps_before_run: string;
@@ -91,7 +94,6 @@ declare module '$env/static/private' {
 	export const USERNAME: string;
 	export const TERM: string;
 	export const GNOME_DESKTOP_SESSION_ID: string;
-	export const WINDOWPATH: string;
 	export const npm_config_node_gyp: string;
 	export const PATH: string;
 	export const SESSION_MANAGER: string;
@@ -101,6 +103,7 @@ declare module '$env/static/private' {
 	export const NODE: string;
 	export const XDG_MENU_PREFIX: string;
 	export const BAMF_DESKTOP_FILE_HINT: string;
+	export const GNOME_SETUP_DISPLAY: string;
 	export const XDG_RUNTIME_DIR: string;
 	export const GDK_BACKEND: string;
 	export const npm_config_frozen_lockfile: string;
@@ -131,10 +134,8 @@ declare module '$env/static/private' {
 	export const GTK_PATH_VSCODE_SNAP_ORIG: string;
 	export const FONTCONFIG_FILE: string;
 	export const GTK_IM_MODULE_FILE_VSCODE_SNAP_ORIG: string;
-	export const GPG_AGENT_INFO: string;
 	export const GJS_DEBUG_OUTPUT: string;
 	export const VSCODE_GIT_ASKPASS_EXTRA_ARGS: string;
-	export const GIT_PAGER: string;
 	export const QT_IM_MODULE: string;
 	export const PWD: string;
 	export const ENABLE_IDE_INTEGRATION: string;
@@ -226,11 +227,14 @@ declare module '$env/dynamic/private' {
 		VSCODE_GIT_ASKPASS_NODE: string;
 		MANAGERPID: string;
 		SYSTEMD_EXEC_PID: string;
+		IM_CONFIG_CHECK_ENV: string;
 		GSM_SKIP_SSH_AGENT_WORKAROUND: string;
 		DBUS_SESSION_BUS_ADDRESS: string;
 		COLORTERM: string;
 		GIO_LAUNCHED_DESKTOP_FILE_PID: string;
 		DEBUGINFOD_URLS: string;
+		IM_CONFIG_PHASE: string;
+		WAYLAND_DISPLAY: string;
 		COREPACK_ENABLE_DOWNLOAD_PROMPT: string;
 		LOGNAME: string;
 		pnpm_config_verify_deps_before_run: string;
@@ -245,7 +249,6 @@ declare module '$env/dynamic/private' {
 		USERNAME: string;
 		TERM: string;
 		GNOME_DESKTOP_SESSION_ID: string;
-		WINDOWPATH: string;
 		npm_config_node_gyp: string;
 		PATH: string;
 		SESSION_MANAGER: string;
@@ -255,6 +258,7 @@ declare module '$env/dynamic/private' {
 		NODE: string;
 		XDG_MENU_PREFIX: string;
 		BAMF_DESKTOP_FILE_HINT: string;
+		GNOME_SETUP_DISPLAY: string;
 		XDG_RUNTIME_DIR: string;
 		GDK_BACKEND: string;
 		npm_config_frozen_lockfile: string;
@@ -285,10 +289,8 @@ declare module '$env/dynamic/private' {
 		GTK_PATH_VSCODE_SNAP_ORIG: string;
 		FONTCONFIG_FILE: string;
 		GTK_IM_MODULE_FILE_VSCODE_SNAP_ORIG: string;
-		GPG_AGENT_INFO: string;
 		GJS_DEBUG_OUTPUT: string;
 		VSCODE_GIT_ASKPASS_EXTRA_ARGS: string;
-		GIT_PAGER: string;
 		QT_IM_MODULE: string;
 		PWD: string;
 		ENABLE_IDE_INTEGRATION: string;

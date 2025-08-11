@@ -1,0 +1,1 @@
+export { default as component } from "../../../../src/routes/assessment/technical-solution/+page.svelte";

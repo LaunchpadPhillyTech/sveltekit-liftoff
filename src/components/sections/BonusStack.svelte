@@ -1,6 +1,6 @@
 <!-- src/components/sections/BonusStack.svelte -->
 <script>
-  import Badge from '../ui/Badge.svelte';
+  import Badge from "../ui/Badge.svelte";
 </script>
 
 <section class="bonus-stack section">
@@ -12,51 +12,67 @@
         <span class="free-tag">FREE Today!</span>
       </div>
     </div>
-    
+
     <div class="bonus-grid">
       <div class="bonus-item">
         <div class="bonus-icon">📊</div>
         <h3>Advanced Analytics Dashboard</h3>
         <p class="bonus-value">$497 Value</p>
-        <p>Track every conversation, conversion, and customer interaction with detailed insights.</p>
+        <p>
+          Track every conversation, conversion, and customer interaction with
+          detailed insights.
+        </p>
       </div>
-      
+
       <div class="bonus-item">
         <div class="bonus-icon">🎯</div>
         <h3>Lead Scoring & Qualification</h3>
         <p class="bonus-value">$297 Value</p>
-        <p>Automatically qualify leads and prioritize your hottest prospects.</p>
+        <p>
+          Automatically qualify leads and prioritize your hottest prospects.
+        </p>
       </div>
-      
+
       <div class="bonus-item">
         <div class="bonus-icon">📱</div>
         <h3>Multi-Platform Integration</h3>
         <p class="bonus-value">$397 Value</p>
-        <p>Connect to Facebook, Instagram, WhatsApp, and your website simultaneously.</p>
+        <p>
+          Connect to Facebook, Instagram, WhatsApp, and your website
+          simultaneously.
+        </p>
       </div>
-      
+
       <div class="bonus-item">
         <div class="bonus-icon">🤖</div>
         <h3>AI Training Optimization</h3>
         <p class="bonus-value">$797 Value</p>
-        <p>Custom AI training for your specific business and industry terminology.</p>
+        <p>
+          Custom AI training for your specific business and industry
+          terminology.
+        </p>
       </div>
-      
+
       <div class="bonus-item">
         <div class="bonus-icon">📈</div>
         <h3>Conversion Rate Optimizer</h3>
         <p class="bonus-value">$697 Value</p>
-        <p>AI-powered optimization that increases your conversion rates automatically.</p>
+        <p>
+          AI-powered optimization that increases your conversion rates
+          automatically.
+        </p>
       </div>
-      
+
       <div class="bonus-item">
         <div class="bonus-icon">🎧</div>
         <h3>Priority Support & Training</h3>
         <p class="bonus-value">$2,800 Value</p>
-        <p>1-on-1 setup call, training session, and priority support for 90 days.</p>
+        <p>
+          1-on-1 setup call, training session, and priority support for 90 days.
+        </p>
       </div>
     </div>
-    
+
     <div class="bonus-cta">
       <p class="urgency-text">⚡ This bonus stack disappears in:</p>
       <div class="timer">23:47:12</div>
@@ -72,15 +88,19 @@
     text-align: center;
     position: relative;
     overflow: hidden;
-    
+
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       top: 0;
       left: 0;
       right: 0;
       bottom: 0;
-      background: radial-gradient(circle at 50% 50%, rgba(79, 172, 254, 0.1), transparent 70%);
+      background: radial-gradient(
+        circle at 50% 50%,
+        rgba(79, 172, 254, 0.1),
+        transparent 70%
+      );
       pointer-events: none;
     }
   }
@@ -92,7 +112,7 @@
 
   .bonus-header {
     margin-bottom: 3rem;
-    
+
     h2 {
       font-size: clamp(2rem, 4vw, 3.5rem);
       margin-bottom: 1rem;
@@ -145,7 +165,7 @@
     overflow: hidden;
 
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       top: 0;
       left: 0;
@@ -227,15 +247,20 @@
   }
 
   @keyframes pulse {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.05); }
+    0%,
+    100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
   }
 
   @media (max-width: 768px) {
     .bonus-grid {
       grid-template-columns: 1fr;
     }
-    
+
     .bonus-item {
       text-align: center;
     }

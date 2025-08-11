@@ -1,29 +1,31 @@
 <!-- src/components/ui/Button.svelte -->
 <script>
-  import { createEventDispatcher } from 'svelte';
-  
+  import { createEventDispatcher } from "svelte";
+
   const dispatch = createEventDispatcher();
-  
-  export let variant = 'primary'; // 'primary', 'secondary', 'ghost'
-  export let size = 'medium'; // 'small', 'medium', 'large'
+
+  export let variant = "primary"; // 'primary', 'secondary', 'ghost'
+  export let size = "medium"; // 'small', 'medium', 'large'
   export let disabled = false;
   export let loading = false;
   export let href = null;
-  export let type = 'button';
+  export let type = "button";
   export let fullWidth = false;
-  
+
   $: classes = [
-    'btn',
+    "btn",
     `btn--${variant}`,
     `btn--${size}`,
-    fullWidth && 'btn--full-width',
-    disabled && 'btn--disabled',
-    loading && 'btn--loading'
-  ].filter(Boolean).join(' ');
-  
+    fullWidth && "btn--full-width",
+    disabled && "btn--disabled",
+    loading && "btn--loading",
+  ]
+    .filter(Boolean)
+    .join(" ");
+
   function handleClick(event) {
     if (!disabled && !loading) {
-      dispatch('click', event);
+      dispatch("click", event);
     }
   }
 </script>
@@ -31,14 +33,14 @@
 {#if href}
   <a {href} class={classes} on:click={handleClick}>
     {#if loading}
-      <span class="spinner"></span>
+      <span class="spinner" />
     {/if}
     <slot />
   </a>
 {:else}
   <button {type} class={classes} {disabled} on:click={handleClick}>
     {#if loading}
-      <span class="spinner"></span>
+      <span class="spinner" />
     {/if}
     <slot />
   </button>
@@ -100,6 +102,19 @@
       }
     }
 
+    &--outline {
+      background: transparent;
+      color: #4facfe;
+      border: 2px solid #4facfe;
+
+      &:hover:not(.btn--disabled):not(.btn--loading) {
+        background: #4facfe;
+        color: white;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(79, 172, 254, 0.3);
+      }
+    }
+
     // Sizes
     &--small {
       padding: 0.5rem 1rem;
@@ -129,7 +144,7 @@
 
     &--loading {
       cursor: wait;
-      
+
       .spinner {
         width: 16px;
         height: 16px;
